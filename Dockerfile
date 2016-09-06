@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 MAINTAINER Larry Smith Jr. <mrlesmithjr@gmail.com>
 
-ENV POWERSHELL_VER="6.0.0-alpha.9"
+ENV POWERSHELL_VER="6.0.0-alpha.8"
 
 # Install Powershell Pre-Reqs
 RUN apt-get update && \
