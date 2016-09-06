@@ -5,7 +5,7 @@ An Ubuntu [Docker] image with Powershell for Linux installed.
 Usage
 -----
 ```
-docker run -it mrlesmithjr/Powershell
+docker run -it mrlesmithjr/powershell
 ```
 
 License
