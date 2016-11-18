@@ -3,7 +3,7 @@ FROM ubuntu:16.04
 MAINTAINER Larry Smith Jr. <mrlesmithjr@gmail.com>
 
 ENV POWERSHELL_DL_URL="https://github.com/PowerShell/PowerShell/releases/download"
-ENV POWERSHELL_VER="6.0.0-alpha.11"
+ENV POWERSHELL_VER="6.0.0-alpha.12"
 ENV POWERSHELL_PACKAGE="powershell_$POWERSHELL_VER-1ubuntu1.16.04.1_amd64.deb"
 
 # Install Powershell Pre-Reqs
