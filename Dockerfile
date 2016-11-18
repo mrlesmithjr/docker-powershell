@@ -13,7 +13,8 @@ RUN apt-get update && \
 # Download Powershell and Install
 RUN curl -LO $POWERSHELL_DL_URL/v$POWERSHELL_VER/$POWERSHELL_PACKAGE && \
     dpkg -i $POWERSHELL_PACKAGE && \
-    rm $POWERSHELL_PACKAGE
+    rm $POWERSHELL_PACKAGE && \
+    apt-get install -f
 
 # Cleanup
 RUN apt-get -y clean && \
