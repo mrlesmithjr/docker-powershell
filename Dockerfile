@@ -8,12 +8,13 @@ ENV POWERSHELL_PACKAGE="powershell_$POWERSHELL_VER-1ubuntu1.16.04.1_amd64.deb"
 
 # Install Powershell Pre-Reqs
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends curl libcurl3 libunwind8 libicu55
+    apt-get install -y curl libcurl3 libunwind8 libicu55
 
 # Download Powershell and Install
 RUN curl -LO $POWERSHELL_DL_URL/v$POWERSHELL_VER/$POWERSHELL_PACKAGE && \
     dpkg -i $POWERSHELL_PACKAGE && \
-    rm $POWERSHELL_PACKAGE
+    rm $POWERSHELL_PACKAGE && \
+    apt-get install -f
 
 # Cleanup
 RUN apt-get -y clean && \
