@@ -1,28 +1,22 @@
-Repo Info
-=========
-An Ubuntu [Docker] image with Powershell for Linux installed.
+# docker-powershell
 
-Usage
------
-```
+An [Ubuntu](https://www.ubuntu.com/) [Docker](https://www.docker.com) image
+with Powershell for Linux installed.
+
+## Usage
+
+```bash
 docker run -it mrlesmithjr/powershell
 ```
 
-License
--------
+## License
 
 BSD
 
-Author Information
-------------------
+## Author Information
 
 Larry Smith Jr.
-- [@mrlesmithjr]
-- [everythingshouldbevirtual.com]
-- [mrlesmithjr@gmail.com]
 
-
-[Docker]: <https://www.docker.com>
-[@mrlesmithjr]: <https://twitter.com/mrlesmithjr>
-[everythingshouldbevirtual.com]: <http://everythingshouldbevirtual.com>
-[mrlesmithjr@gmail.com]: <mailto:mrlesmithjr@gmail.com>
+-   [@mrlesmithjr](https://www.twitter.com/mrlesmithjr)
+-   [everythingshouldbevirtual.com](http://everythingshouldbevirtual.com)
+-   [mrlesmithjr@gmail.com](mrlesmithjr@gmail.com)
