@@ -6,14 +6,17 @@ ENV POWERSHELL_DL_URL="https://github.com/PowerShell/PowerShell/releases/downloa
 ENV POWERSHELL_VER="6.0.0-rc.2"
 ENV POWERSHELL_PACKAGE="powershell_$POWERSHELL_VER-1.ubuntu.16.04_amd64.deb"
 
-# Install Powershell Pre-Reqs
+# Install PowerShell Pre-Reqs
 RUN apt-get update && \
-    apt-get install -y curl libcurl3 libunwind8 libicu55
+    apt-get install -y liblttng-ust0 libcurl3 libgssapi-krb5-2 libunwind8 \
+    libssl1.0.0 libicu55
 
-# Download Powershell and Install
-RUN curl -LO $POWERSHELL_DL_URL/v$POWERSHELL_VER/$POWERSHELL_PACKAGE && \
-    dpkg -i $POWERSHELL_PACKAGE && \
-    rm $POWERSHELL_PACKAGE && \
+# Download PowerShell
+ADD $POWERSHELL_DL_URL/v$POWERSHELL_VER/$POWERSHELL_PACKAGE /root
+
+# Install PowerShell
+RUN dpkg -i /root/$POWERSHELL_PACKAGE && \
+    rm /root/$POWERSHELL_PACKAGE && \
     apt-get install -f
 
 # Cleanup
@@ -21,4 +24,4 @@ RUN apt-get -y clean && \
     apt-get -y autoremove && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-Entrypoint [ "powershell" ]
+CMD [ "pwsh" ]
