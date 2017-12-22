@@ -4,7 +4,7 @@ MAINTAINER Larry Smith Jr. <mrlesmithjr@gmail.com>
 
 ENV POWERSHELL_DL_URL="https://github.com/PowerShell/PowerShell/releases/download"
 ENV POWERSHELL_VER="6.0.0-rc.2"
-ENV POWERSHELL_PACKAGE="powershell_$POWERSHELL_VER-1ubuntu1.16.04.1_amd64.deb"
+ENV POWERSHELL_PACKAGE="powershell_$POWERSHELL_VER-1.ubuntu.16.04_amd64.deb"
 
 # Install Powershell Pre-Reqs
 RUN apt-get update && \
